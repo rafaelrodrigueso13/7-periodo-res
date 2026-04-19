@@ -5,24 +5,25 @@ export function Welcome() {
     const navigation = useNavigation();
 
     function handlePress() {
-        navigation.navigate("Drawer")
+        navigation.navigate("Drawer" as never)
     }
 
     function registerPress() {
-        navigation.navigate("Register")
+        navigation.navigate("Register" as never)
     }
 
     function loginPress() {
-        navigation.navigate("Login")
+        navigation.navigate("Login" as never)
     }
 
     return(
      <View style={{flex:1, alignItems: "center", justifyContent:"center"}} >
         <Text>
-            Bem-vindo ao aplicativo. Utilize o menu de navegação para acessar as telas de modais e as listas com rolagem.
+            Bem-vindo ao aplicativo de aluguel de carros.
         </Text>
-        <Button title="Ir pra Login" onPress={handlePress} />
-        <Button title="Ir pra Registrar" onPress={registerPress} />
+        <Button title="Ir para Drawer" onPress={handlePress} />
+        <Button title="Registrar" onPress={registerPress} />
+        <Button title="Login" onPress={loginPress} />
      </View>
     )
 }

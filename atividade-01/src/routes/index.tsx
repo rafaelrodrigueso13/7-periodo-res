@@ -1,11 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native'
-import { StackNav } from './stack';
+import { AppNavigator } from './AppNavigator';
 
 
 export function Routes() {
     return(
         <NavigationContainer>
-            <StackNav />
+            <AppNavigator />
         </NavigationContainer>
     )
 } 
